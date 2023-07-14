@@ -53,9 +53,6 @@ function actualizarContacto(id, contactoActualizado) {
     }
 }
   
-//   function definitivaListaContactos() {
-//     return listaContactos;
-//   }
 
 function definitivaListaContactos(){
     const listaDef = listaContactos;
