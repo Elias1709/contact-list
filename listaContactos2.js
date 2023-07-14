@@ -46,6 +46,17 @@ function eliminarContactos(){
     
 }
 
+function actualizarContacto(id, contactoActualizado) {
+    const contactoIndex = listaContactos.findIndex((contacto) => contacto.id === id);
+    if (contactoIndex !== -1) {
+      listaContactos[contactoIndex] = contactoActualizado;
+    }
+}
+  
+//   function definitivaListaContactos() {
+//     return listaContactos;
+//   }
+
 function definitivaListaContactos(){
     const listaDef = listaContactos;
     return listaDef;
@@ -55,5 +66,16 @@ function definitivaListaContactos(){
 
 console.log(agregarContacto(listaContactos));
 console.log(eliminarContactos(listaContactos));
+
+actualizarContacto("2", {
+    id: "2",
+    nombres: "Paola",
+    apellidos: "Mejia",
+    telefono: "999999999",
+    ubicaciones: { ciudad: "Medellin", direccion: "Centro" },
+  });
+
+console.log(listaContactos);
+console.log('-----------Despues de esta linea se mostrara la lista de contactos definitiva------------');
 
 console.log(definitivaListaContactos(listaContactos));
